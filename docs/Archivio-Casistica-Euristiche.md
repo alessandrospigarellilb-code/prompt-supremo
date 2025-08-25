@@ -13,29 +13,39 @@
 | C-0001  | 2025-08-25 | “bamba”                     | Non riconosciuto come slang consolidato al primo tentativo | V1.2 – Rilevamento slang consolidato | Aggiunta regola JJ-H-0001; test di riconoscimento immediato                           | Risolto | (link conversazione) |
 | C-0002  | 2025-08-25 | Mock-proverb “cugina”       | Rischio confusione con proverbio tradizionale       | Modulo 1-bis + disambiguazione progressiva | Marcatura “goliardico/online” + richiesta fonti                                      | Monitoraggio | (link conversazione) |
 | C-0003  | 2025-08-23 | “Gianni Morandi coprofago”  | Non riconosciuto come voce circolata; risposta troppo secca | Modulo 1-bis + ricerca multidirezionale | Regola JJ-H-0004: anche in caso di fake, cercare sempre fonti/menzioni satiriche      | Risolto | (link conversazione) |
+| C-0004  | 2025-08-27 | “sbarbasucchiare”           | Termine non standard, rischio classificazione errata | Modulo 1-bis + Riconoscimento slang/neologismi | Regola JJ-H-0005: etichettare come neologismo/slang ironico, chiedere conferma prima di assumere significato | Monitoraggio | (link conversazione) |
 
 ---
 
 ## 2) Libreria di Euristiche (JJ-H-####)
 
+> ℹ️ Nota: il numero di **euristiche (JJ-H-####)** e di **casistiche (C-####)** non è simmetrico.  
+> Una singola casistica può generare più euristiche e una singola euristica può derivare da più casi.  
+> Per questo la numerazione segue flussi indipendenti, anche se sempre connessi tramite descrizioni e test.
+
+---
+
 **JJ-H-0001 — Slang consolidato: riconoscimento immediato**  
 - **Stato:** attivo (V1.2)  
 - **Regola:** se termine ∈ lista slang consolidati (es. *bamba*), marcarlo subito; se ambiguità d’uso → elencare alternative e chiedere conferma solo se necessario.  
-- **Test di regressione:** input “bamba” deve passare senza warning.  
+- **Motivo:** evitare mancato riconoscimento di slang diffusi.  
+- **Test di regressione:** coperto da **T-0001**.  
 
 ---
 
 **JJ-H-0002 — Anti-confusione fonetica/semantica**  
 - **Stato:** attivo (V1.2)  
 - **Regola:** quando due termini sono simili (fonetica o semantica), attivare mapping univoco, esplicitare alternative e segnalare rischio di errore di mapping.  
-- **Output atteso:** nota “potenziale conflitto” + richiesta conferma se costo dell’errore è alto.  
+- **Motivo:** prevenire errori di interpretazione dovuti a termini simili.  
+- **Test di regressione:** coperto da **T-0002**.  
 
 ---
 
 **JJ-H-0003 — Mock-proverb vs proverbio tradizionale**  
 - **Stato:** attivo (V1.2)  
 - **Regola:** se struttura = rima + tabù + sentenza → presumere mock-proverb; cercare riscontri goliardici/online prima di classificarlo “tradizionale”.  
-- **Output atteso:** etichetta “goliardico/online” salvo fonti robuste.  
+- **Motivo:** distinguere folklore autentico da invenzioni satiriche/online.  
+- **Test di regressione:** coperto da **T-0003**.  
 
 ---
 
@@ -47,7 +57,17 @@
   - 🔔 Voci circolate (citazioni satiriche/blog)  
   - ⚠️ Errori cognitivi (se l’utente ricorda male)  
 - **Motivo:** evitare risposte “taglio netto” che oscurano il contesto delle voci.  
-- **Test di regressione:** prompt “<personaggio noto> coprofago?” → output deve riportare fonti satiriche anche se infondate.  
+- **Test di regressione:** coperto da **T-0004**.  
+
+---
+
+**JJ-H-0005 — Neologismi/Slang ironici**  
+- **Stato:** attivo (V1.2+)  
+- **Regola:** se un termine non è presente in dizionari/slang consolidati, ma ha morfologia da verbo inventato (*sbarbasucchiare*), marcarlo come:  
+  - ⚠️ Neologismo / ironico  
+  - Non assegnare significato certo senza conferma dell’utente.  
+- **Motivo:** prevenire errori di interpretazione automatica su parole inventate.  
+- **Test di regressione:** coperto da **T-0005**.  
 
 ---
 
@@ -60,4 +80,5 @@
 - **T-0001 (slang “bamba”)** → deve essere riconosciuto subito.  
 - **T-0002 (termini simili)** → attivazione mapping univoco con nota di conflitto.  
 - **T-0003 (mock-proverb)** → classificazione corretta + richiesta fonti.  
-- **T-0004 (fake news satirica)** → output deve includere fonti satiriche anche se bufala.
+- **T-0004 (fake news satirica)** → output deve includere fonti satiriche anche se bufala.  
+- **T-0005 (neologismo “sbarbasucchiare”)** → input del termine deve attivare richiesta di conferma, senza assegnare significato arbitrario. Output atteso: nota “termine non standard” + domanda di chiarimento.
