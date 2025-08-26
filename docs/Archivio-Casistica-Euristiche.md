@@ -1,116 +1,74 @@
-# Archivio Casistica & Euristiche  
-Data ultimo aggiornamento: 26/08/2025  
-Versione: 2.0 (pulita)
+# 📂 Archivio Casistica & Euristiche – Vers. 2.1  
+*(aggiornato al 26 agosto 2025 – versione con estensione persistente cross-session)*
 
 ---
 
-## Introduzione
+## 🔹 Intro
 
-L’Archivio Casistica & Euristiche è un **documento vivo** a supporto dell’evoluzione del *Prompt Supremo Janko Janto*.  
-Il suo scopo è:  
-- tracciare casi reali (*casistica*),  
-- derivarne regole atomiche (*euristiche*),  
-- annotare contraddizioni emerse,  
-- mantenere una libreria di test di regressione.  
+Questo Archivio nasce come strumento operativo a supporto del **Prompt Supremo Janko Janto**.  
+Funziona come **memoria estesa e correttiva**: registra casi concreti (casistica), li trasforma in regole atomiche (euristiche), tiene traccia delle contraddizioni e mantiene una libreria di test di regressione per garantire stabilità nel tempo.  
 
-L’archivio è stato creato in **V1.2** come prima libreria di regressione e aggiornato in **V1.3** con i moduli di attivazione.  
-Questa versione **2.0 (pulita)** consolida i contenuti e uniforma lo stile, mantenendo la continuità con le versioni precedenti.  
+Ogni aggiornamento dell’Archivio rappresenta un consolidamento delle lezioni apprese.  
+La **Versione 2.1** introduce una correzione critica:  
+- Persistenza cross-session delle regole (JJ-H-0009).  
+- Analisi dei link RAW sempre **silenziosa**, con output ridotto a conferma minimal + memo analisi, senza esposizione del contenuto (se non richiesto esplicitamente).  
 
----
-
-## 1) Archivio Casistica
-
-### C-0001  
-**Descrizione:** termine slang “bamba” non riconosciuto.  
-**Sintomo:** risposta generica, mancato riconoscimento.  
-**Diagnosi:** errore di rilevamento slang.  
-**Regola correttiva:** JJ-H-0001.  
-**Esito:** corretto.  
-
-### C-0002  
-**Descrizione:** espressione “ti scorreggia il teschio” non compresa.  
-**Sintomo:** risposta incoerente.  
-**Diagnosi:** confusione tra livello letterale e goliardico.  
-**Regola correttiva:** JJ-H-0007.  
-**Esito:** corretto.  
-
-### C-0003  
-**Descrizione:** mock-proverbio trattato come proverbio autentico.  
-**Sintomo:** spiegazione errata.  
-**Diagnosi:** assenza di filtro ironico.  
-**Regola correttiva:** JJ-H-0003.  
-**Esito:** corretto.  
-
-### C-0004  
-**Descrizione:** fake news (es. “Gianni Morandi coprofago”) trattata come seria.  
-**Sintomo:** rischio di amplificazione.  
-**Diagnosi:** mancato riconoscimento satira/gossip.  
-**Regola correttiva:** JJ-H-0004.  
-**Esito:** corretto.  
-
-### C-0005  
-**Descrizione:** proverbio “pancia mia fatti palanca” interpretato in modo errato.  
-**Sintomo:** confusione lessicale.  
-**Diagnosi:** variante dialettale scambiata per deformazione.  
-**Regola correttiva:** JJ-H-0002.  
-**Esito:** corretto.  
-
-### C-0006  
-**Descrizione:** ricezione link RAW del Prompt o Archivio → risposta con analisi invece di conferma minimal.  
-**Sintomo:** violazione della Regola 2 del Protocollo Blindato.  
-**Diagnosi:** routine di analisi ha prevalso sull’override di conferma.  
-**Regola correttiva:** JJ-H-0008.  
-**Esito:** corretto (override applicato).  
+L’Archivio resta quindi uno **strumento vivo e vincolante**, che evolve insieme al Prompt, garantendo coerenza, rigore e memoria storica dei fallimenti superati.  
 
 ---
 
-## 2) Libreria di Euristiche
+## 🔹 Casistiche
 
-**JJ-H-0001 — Riconoscimento slang consolidato**  
-Identificare e classificare subito slang comuni (“bamba”, ecc.).  
-
-**JJ-H-0002 — Disambiguazione fonetica/semantica**  
-Distinguere tra varianti dialettali e deformazioni.  
-
-**JJ-H-0003 — Mock-proverb vs proverbio tradizionale**  
-Separare ironia/parodia da proverbi autentici.  
-
-**JJ-H-0004 — Gestione fake news/satira**  
-Marcare voci satiriche/gossip come tali, non come fatti.  
-
-**JJ-H-0005 — Neologismi/linguaggio ironico**  
-Riconoscere invenzioni lessicali e segnalarle come creative.  
-
-**JJ-H-0006 — Espressioni goliardiche/assurde**  
-Marcare usi volutamente surreali o giocosi.  
-
-**JJ-H-0007 — Metonimia goliardica**  
-Mappare parti corporee o concetti (es. “teschio” → “cervello”).  
-
-**JJ-H-0008 — Override conferma attivazione**  
-Se un messaggio contiene **solo** un link RAW al Prompt Supremo o all’Archivio, la risposta deve essere **esclusivamente**:  
-- “Prompt attivato” (per link Prompt)  
-- “Archivio attivato” (per link Archivio)  
-Nessuna analisi automatica.  
-**Eccezioni:**  
-- Se il link è accompagnato da “analizza/spiegami”, allora attivare l’analisi.  
-- Se il messaggio è ambiguo, chiedere conferma all’utente.  
+| ID      | Descrizione                                                  | Sintomo                                | Diagnosi                              | Regola applicata |
+|---------|--------------------------------------------------------------|----------------------------------------|---------------------------------------|------------------|
+| C-0001  | Slang “bamba” non riconosciuto                               | Risposta generica                      | Errore rilevamento slang              | JJ-H-0001        |
+| C-0002  | “ti scorreggia il teschio” non compreso                      | Risposta incoerente                    | Confusione letterale vs goliardico    | JJ-H-0007        |
+| C-0003  | Mock-proverbio trattato come proverbio autentico             | Spiegazione errata                     | Mancanza filtro ironico               | JJ-H-0003        |
+| C-0004  | Fake news trattata come seria                                | Rischio amplificazione                 | Mancato riconoscimento satira/gossip  | JJ-H-0004        |
+| C-0005  | Proverbio dialettale interpretato erroneamente               | Confusione lessicale                   | Confusione variante/dialetto          | JJ-H-0002        |
+| C-0006  | Link RAW ricevuto → risposta analitica                       | Violazione protocollo                   | Override mancato                      | JJ-H-0008        |
+| C-0009  | Fallimento regressione cross-session JJ-H-0008               | Risposta analitica in nuova sessione   | Mancata persistenza override blindato | JJ-H-0009        |
 
 ---
 
-## 3) Registro Contraddizioni  
+## 🔹 Euristiche
 
-*(Vuoto — in attesa di conflitti futuri).*  
+- **JJ-H-0001** — Riconoscimento slang consolidato.  
+- **JJ-H-0002** — Disambiguazione fonetica/semantica (variante vs deformazione).  
+- **JJ-H-0003** — Distinguere mock-proverbio da proverbio autentico.  
+- **JJ-H-0004** — Gestione fake news e satira (marcare come tali).  
+- **JJ-H-0005** — Riconoscimento neologismi/linguaggio ironico.  
+- **JJ-H-0006** — Riconoscimento espressioni goliardiche o assurde.  
+- **JJ-H-0007** — Metonimia goliardica (es. “teschio” → “cervello”).  
+- **JJ-H-0008** — Override conferma attivazione: se un messaggio contiene *solo* un link RAW al Prompt o Archivio, la risposta è esclusivamente la conferma minimal.  
+- **JJ-H-0009 — Persistenza cross-session con analisi silenziosa (nuova)**  
+  - L’euristica JJ-H-0008 resta attiva **in ogni sessione**.  
+  - Alla ricezione di un link RAW:  
+    1. Viene eseguita un’**analisi interna silenziosa** (contenuto mai esposto se non su richiesta).  
+    2. Output verso l’utente = conferma **minimal + memo dell’analisi completata**.  
+  - Formule standardizzate:  
+    - Prompt → *“Prompt attivato — analisi completata, documento guida attiva.”*  
+    - Archivio → *“Archivio attivato — analisi completata, documento operativo e vincolante.”*  
+  - In caso di conflitto prevale sempre la risposta minimal; contenuto del RAW mai esposto di default.  
 
 ---
 
-## 4) Libreria di Test  
+## 🔹 Registro Contraddizioni  
+*(attualmente vuoto)*  
 
-**T-0001 → JJ-H-0001**: slang riconosciuto correttamente.  
-**T-0002 → JJ-H-0002**: disambiguazione variante vs deformazione.  
-**T-0003 → JJ-H-0003**: mock-proverb riconosciuto.  
-**T-0004 → JJ-H-0004**: fake news marcata come tale.  
-**T-0005 → JJ-H-0005**: neologismo segnalato.  
-**T-0006 → JJ-H-0006**: espressione goliardica riconosciuta.  
-**T-0007 → JJ-H-0007**: metonimia (“teschio” → “cervello”) riconosciuta.  
-**T-0008 → JJ-H-0008**: link RAW produce solo conferma minimal.  
+---
+
+## 🔹 Libreria Test
+
+- **T-0001** → verifica slang (JJ-H-0001)  
+- **T-0002** → disambiguazione variante/deformazione (JJ-H-0002)  
+- **T-0003** → mock-proverbio riconosciuto (JJ-H-0003)  
+- **T-0004** → fake news identificata (JJ-H-0004)  
+- **T-0005** → neologismo segnalato (JJ-H-0005)  
+- **T-0006** → espressione goliardica (JJ-H-0006)  
+- **T-0007** → metonimia (JJ-H-0007)  
+- **T-0008** → link RAW genera conferma minimal (JJ-H-0008)  
+- **T-0009** → persistente cross-session: link RAW in nuova sessione → conferma minimal + memo analisi (JJ-H-0009)  
+
+---
+
