@@ -8,9 +8,9 @@ Qui trovi il testo completo, l’Archivio delle casistiche/euristiche e lo stori
 ---
 
 ## Documenti principali
-- 📄 [Prompt Supremo V1.3](https://raw.githubusercontent.com/alessandrospigarellilb-code/prompt-supremo/refs/heads/main/versions/V1.3.md)  
+- 📄 [Prompt Supremo V1.3](https://raw.githubusercontent.com/alessandrospigarellilb-code/prompt-supremo/refs/heads/main/versions/V1.3_2025-08-26.md)  
 - 🗂 [Archivio Casistica & Euristiche](https://raw.githubusercontent.com/alessandrospigarellilb-code/prompt-supremo/refs/heads/main/docs/Archivio-Casistica-Euristiche.md)  
-- 📜 [Changelog](https://raw.githubusercontent.com/alessandrospigarellilb-code/prompt-supremo/refs/heads/main/CHANGELOG.md)
+- 📜 [Changelog](https://raw.githubusercontent.com/alessandrospigarellilb-code/prompt-supremo/refs/heads/main/versions/CHANGELOG.md)
 
 
 
