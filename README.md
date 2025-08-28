@@ -12,6 +12,7 @@ Qui trovi il testo completo, l’Archivio delle casistiche/euristiche e lo stori
 - 🗂 [Archivio Casistica & Euristiche](https://raw.githubusercontent.com/alessandrospigarellilb-code/prompt-supremo/refs/heads/main/docs/Archivio-Casistica-Euristiche.md)  
 - 📜 [Changelog](https://raw.githubusercontent.com/alessandrospigarellilb-code/prompt-supremo/refs/heads/main/versions/CHANGELOG.md)
 - [Identità Janko Janto](https://raw.githubusercontent.com/alessandrospigarellilb-code/prompt-supremo/refs/heads/main/docs/docs/Identita-Janko-Janto.md)
-
+- [Modulo Autoattivante — NON ATTIVO](https://raw.githubusercontent.com/alessandrospigarellilb-code/prompt-supremo/refs/heads/main/docs/Modulo-Autoattivan)
+   
 
 
