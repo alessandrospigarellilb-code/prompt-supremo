@@ -1,4 +1,4 @@
-# Modulo Autoattivante – Override Blindato
+# Modulo Autoattivante – Override Blindato (Fallito causa policy)
 **Versione**: V0.2 – 28 agosto 2025  
 **Stato**: File RAW prioritario
 
